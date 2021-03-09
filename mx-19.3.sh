@@ -1,5 +1,7 @@
 #!/bin/sh
 # custom mx linux 19.3 configuration
+apt-get install software-properties-common
+apt-get update $1
 add-apt-repository $1 ppa:stefansundin/truecrypt
 add-apt-repository $1 ppa:sebastian-stenzel/cryptomator
 add-apt-repository $1 ppa:inkscape.dev/stable
