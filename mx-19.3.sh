@@ -40,3 +40,8 @@ apt-get install $1 solaar
 apt-get install $1 winff
 apt-get install $1 kdenlive kdenlive-data frei0r-plugins breeze-icon-theme
 apt-get install $1 scrcpy
+wget https://github.com/turtl/desktop/releases/download/v0.7.2.5/turtl-0.7.2.5-linux64.tar.bz2
+tar -xvf turtl-0.7.2.5-linux64.tar.bz2
+cd turtl-linux64
+sudo ./install.sh
+# run /opt/turtl/turtl
