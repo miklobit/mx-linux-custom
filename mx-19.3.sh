@@ -16,6 +16,7 @@ apt-get install $1 net-tools
 apt-get install $1 telegram
 apt-get install $1 veracrypt
 apt-get install $1 truecrypt
+apt-get install $1 cryptomator
 apt-get install $1 flameshot
 apt-get install $1 inkscape
 apt-get install $1 virtualbox
