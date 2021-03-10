@@ -34,3 +34,4 @@ apt-get install $1 ./spacenavd_0.7.1-1_amd64.deb
 apt-get install $1 solaar
 # FFmpeg frontend
 apt-get install $1 winff
+apt-get install $1 kdenlive kdenlive-data frei0r-plugins breeze-icon-theme
