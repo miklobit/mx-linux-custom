@@ -1,5 +1,6 @@
 #!/bin/sh
 # custom mx linux 19.3 configuration
+# run as:  sudo mx-19.3.sh -y
 apt-get install software-properties-common
 apt-get update $1
 echo 'deb http://ppa.launchpad.net/stefansundin/truecrypt/ubuntu xenial main' | sudo tee /etc/apt/sources.list.d/truecrypt.list
@@ -38,3 +39,4 @@ apt-get install $1 solaar
 # FFmpeg frontend
 apt-get install $1 winff
 apt-get install $1 kdenlive kdenlive-data frei0r-plugins breeze-icon-theme
+apt-get install $1 scrcpy
