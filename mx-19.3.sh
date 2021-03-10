@@ -23,3 +23,5 @@ apt-get install $1 flameshot
 apt-get install $1 -t buster-backports inkscape
 apt-get install $1 virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso
 apt-get install $1 obs-studio obs-plugins libobs0
+apt-get install $1 python3-pip
+pip3 install numpy
