@@ -14,6 +14,8 @@ echo 'deb http://ftp.debian.org/debian buster-backports non-free contrib main' |
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 source /etc/os-release
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ buster main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-buster.list
+wget -qO - https://eddie.website/repository/keys/eddie_maintainer_gpg.key|sudo apt-key add -
+echo "deb http://eddie.website/repository/apt stable main" | sudo tee /etc/apt/sources.list.d/eddie.website.list
 apt-get update $1
 apt-get upgrade $1
 apt-get install $1 net-tools
@@ -21,6 +23,7 @@ apt-get install $1 telegram
 apt-get install $1 veracrypt
 apt-get install $1 truecrypt
 apt-get install $1 cryptomator
+apt-get install $1 eddie-ui
 apt-get install $1 flameshot
 apt-get install $1 -t buster-backports inkscape
 apt-get install $1 virtualbox virtualbox-dkms virtualbox-ext-pack virtualbox-guest-additions-iso
