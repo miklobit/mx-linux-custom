@@ -2,7 +2,8 @@
 # custom mx linux 19.3 configuration
 apt-get install software-properties-common
 apt-get update $1
-add-apt-repository $1 ppa:stefansundin/truecrypt
+echo 'deb http://ppa.launchpad.net/stefansundin/truecrypt/ubuntu xenial main' | sudo tee /etc/apt/sources.list.d/truecrypt.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0xFFE1FFFFAFEC55BB
 add-apt-repository $1 ppa:sebastian-stenzel/cryptomator
 add-apt-repository $1 ppa:inkscape.dev/stable
 add-apt-repository $1 ppa:atareao/telegram
