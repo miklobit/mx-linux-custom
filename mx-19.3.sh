@@ -32,3 +32,5 @@ apt-get install $1 brave-browser
 wget http://ftp.pl.debian.org/debian/pool/main/s/spacenavd/spacenavd_0.7.1-1_amd64.deb
 apt-get install $1 ./spacenavd_0.7.1-1_amd64.deb
 apt-get install $1 solaar
+# FFmpeg frontend
+apt-get install $1 winff
