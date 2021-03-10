@@ -17,10 +17,15 @@ source /etc/os-release
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ buster main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-buster.list
 wget -qO - https://eddie.website/repository/keys/eddie_maintainer_gpg.key|sudo apt-key add -
 echo "deb http://eddie.website/repository/apt stable main" | sudo tee /etc/apt/sources.list.d/eddie.website.list
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+mv signal-desktop-keyring.gpg /usr/share/keyrings/
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 apt-get update $1
 apt-get upgrade $1
 apt-get install $1 net-tools
 apt-get install $1 telegram
+apt-get install $1 signal-desktop
 apt-get install $1 veracrypt
 apt-get install $1 truecrypt
 apt-get install $1 cryptomator
